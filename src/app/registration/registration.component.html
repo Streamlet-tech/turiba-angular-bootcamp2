@@ -1,0 +1,39 @@
+<section class="registration">
+  <div class="form col-lg-4 m-auto">
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Phone number</label>
+        <input type="tel" class="form-control" id="phone" [(ngModel)]="phone" name="phone">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Number of guests</label>
+        <input type="number" class="form-control" id="guests" [(ngModel)]="guests" name="guests">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Check-in</label>
+        <input type="date" class="form-control" id="arrivaldate" [(ngModel)]="arrivaldate" name="arrivaldate">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Check-out</label>
+        <input type="date" class="form-control" id="departuredate" [(ngModel)]="departuredate" name="departuredate">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Breakfast</label>
+      </div>
+      <button type="submit" class="btn btn-primary col-lg-12" (click)="regexAll()">Register</button><br><br>
+      <div *ngIf="test===true; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>Thanks! Registration complete!</ng-template>
+<ng-template #elseBlock>Enter all fields</ng-template>
+    </form>
+    <span></span>
+  </div>
+</section>

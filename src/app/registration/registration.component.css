@@ -1,0 +1,13 @@
+.registration {
+  padding: 110px 100px;
+}
+
+.form {
+  padding: 20px 30px;
+}
+
+@media screen and (max-width:600px){
+  .registration {
+    padding: 140px 30px;
+  }
+}
